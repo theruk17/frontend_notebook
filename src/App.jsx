@@ -82,11 +82,11 @@ function App() {
                             <p className="leading-tight text-xs md:text-sm text-left font-light text-black">RAM: {item.nb_ram}</p>
                             <p className="leading-tight text-xs md:text-sm text-left font-light text-black uppercase">STORAGE: {item.nb_storage}</p>
                             <p className="leading-tight text-xs md:text-sm text-left font-light text-black uppercase">OS: {item.nb_os}</p>
-                            <div className="flex justify-between items-center">
-                              <p className="leading-normal text-xl text-left font-bold text-red-600">฿<NumericFormat value={item.nb_price_srp} thousandSeparator="," displayType="text" /></p>
-                              {item.nb_dis_price === null || (item.nb_dis_price === item.nb_price_srp) ? "": <p className=" pr-4 line-through leading-normal text-base text-right font-light text-gray-500">฿<NumericFormat value={item.nb_dis_price} thousandSeparator="," displayType="text" /></p>}
+                            {item.nb_dis_price === null || (item.nb_dis_price === item.nb_price_srp) ? "": <p className=" pr-4 line-through leading-none text-md text-center font-normal text-gray-500"><NumericFormat value={item.nb_dis_price} thousandSeparator="," displayType="text" />.-</p>}
+                            <p className="leading-normal text-2xl text-center font-bold text-red-600"><NumericFormat value={item.nb_price_srp} thousandSeparator="," displayType="text" />.-</p>
+                              
 
-                            </div>
+                            
                           </div>
                         </div>
                       </a>
